@@ -76,6 +76,8 @@ module.exports = {
       img: good.data.img
     });
 
+    await Trolley.deleteTrolley(good.data);
+
     good.data.destroy();
     
     let g = await Goods.listGoods(record);
